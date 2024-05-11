@@ -13,7 +13,7 @@ function Navbar() {
     }, []);
 
     const fetchMostStarredRepositories = () => {
-        fetch('https://api.github.com/search/repositories?q=stars:>1&sort=stars&order=desc')
+        fetch('https://api.github.com/search/repositories?q=stars:>2&sort=stars&order=desc')
             .then((response) => response.json())
             .then((data) => {
                 setRepositories(data.items);
